@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 module.exports = () => {
-    mongoose.connect('mongodb://movie_user:1qaz2wsx@ds217078.mlab.com:17078/movie-api', {useNewUrlParser: true });
+    mongoose.connect('mongodb://movie_user:1qaz2wsx@ds217078.mlab.com:17078/movie-api', {useNewUrlParser: true, useCreateIndex: true });
     mongoose.connection.on('open', () => {
         console.log('MongoDB: Connected');
     });
